@@ -7,7 +7,7 @@ import {
     StatusBar,
     SafeAreaView,
     Alert,
-    Item,
+    Image,
     Platform
 } from 'react-native';
 import MapView ,{Marker} from 'react-native-maps';
