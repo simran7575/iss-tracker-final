@@ -8,7 +8,7 @@ export default class MeteorScreen extends Component {
      this.state={
          meteors:{}
      }
-    };
+    }
 
 // to get meteors data from API call
     getMeteors=()=>{
@@ -55,12 +55,12 @@ export default class MeteorScreen extends Component {
                         <Image source={speed} style={{width:size, height:size , alignSelf:"auto"}}/>
                    
                     <View>
-                    <Text style={[styles.cardTitle,{marginTop:400, marginLeft:50}]}>{item.name}</Text>
-                    <Text style={[styles.cardText,{marginTop:20, marginLeft:50}]}>Closest to Earth - {item.close_approach_data[0].close_approach_date_full}</Text>
-                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Minimum Diameter(KM) - {item.estimated_diameter.kilometers.estimated_diameter_min}</Text>
-                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Maximum Diameter(KM) - {item.estimated_diameter.kilometers.estimated_diameter_max}</Text>
-                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Velocity(KM/H) - {item.close_approach_data[0].relative_velocity.kilometers_per_hour}</Text>
-                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Missing Earth by(KM) - {item.close_approach_data[0].miss_distance.kilometers}</Text>
+                    <Text style={[styles.cardTitle,{marginTop:400, marginLeft:50}]}>{item.item.name}</Text>
+                    <Text style={[styles.cardText,{marginTop:20, marginLeft:50}]}>Closest to Earth - {item.item.close_approach_data[0].close_approach_date_full}</Text>
+                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Minimum Diameter(KM) - {item.item.estimated_diameter.kilometers.estimated_diameter_min}</Text>
+                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Maximum Diameter(KM) - {item.item.estimated_diameter.kilometers.estimated_diameter_max}</Text>
+                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Velocity(KM/H) - {item.item.close_approach_data[0].relative_velocity.kilometers_per_hour}</Text>
+                    <Text style={[styles.cardText,{marginTop:5, marginLeft:50}]}>Missing Earth by(KM) - {item.item.close_approach_data[0].miss_distance.kilometers}</Text>
                </View>
                </View>
                 </ImageBackground>
